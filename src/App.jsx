@@ -4,6 +4,7 @@ import ReactSearchBox from "react-search-box";
 import Search from 'react-search'
 import SearchBar from './components/Searchbar';
 import LiveSearch from './components/LiveSearch';
+import TitleText from './components/TitlesText';
 function App() {
   const [count, setCount] = useState(0)
   const profiles = [
@@ -62,6 +63,7 @@ function App() {
   };
   return (
     <>
+    <TitleText/>
      <LiveSearch
       results={results}
       value={selectedProfile?.name}

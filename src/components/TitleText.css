@@ -1,0 +1,19 @@
+/* TitleText.css */
+
+.container {
+    width: 100%;
+    /* background-color: #b21717; */
+    overflow: hidden; /* Hide horizontal scrollbar */
+  }
+   
+  .module {
+    width: 50%; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh; /* Set a minimum height for each module */
+    color: aqua;
+  }
+  .green{ background-color: green;border: 2px double green;}
+  .red{ background-color: red; border: 2px dotted red;}
+  .blue{ background-color: blue; border: 2px thick blue; }
