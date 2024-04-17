@@ -3,7 +3,7 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'; // Import ScrollTrigger
-
+import './TitleText.css'
 gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger plugin
 
 const TitleText = () => {
@@ -34,7 +34,7 @@ const TitleText = () => {
       <div className="module green">
         <h2>Module green</h2>
       </div>
-      <div className="module bluen">
+      <div className="module blue">
         <h2>Module blue </h2>
       </div>
       <div className="module red">

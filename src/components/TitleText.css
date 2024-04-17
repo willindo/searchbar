@@ -2,7 +2,8 @@
 
 .container {
     width: 100%;
-    /* background-color: #b21717; */
+    height: min-content;
+    background-color: #a4b909;
     overflow: hidden; /* Hide horizontal scrollbar */
   }
    

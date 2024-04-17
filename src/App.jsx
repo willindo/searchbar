@@ -5,6 +5,8 @@ import Search from 'react-search'
 import SearchBar from './components/Searchbar';
 import LiveSearch from './components/LiveSearch';
 import TitleText from './components/TitlesText';
+import MouseFollowComponent from './components/MouseFollowComponent';
+// import MouseStay from './components/MouseStay,jsx';
 function App() {
   const [count, setCount] = useState(0)
   const profiles = [
@@ -63,6 +65,8 @@ function App() {
   };
   return (
     <>
+    {/* <MouseStay/>  */}
+    <MouseFollowComponent/>
     <TitleText/>
      <LiveSearch
       results={results}
