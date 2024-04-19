@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import './App.css'
-import ReactSearchBox from "react-search-box";
-import Search from 'react-search'
-import SearchBar from './components/Searchbar';
 import LiveSearch from './components/LiveSearch';
-import TitleText from './components/TitlesText';
 import MouseFollowComponent from './components/MouseFollowComponent';
-// import MouseStay from './components/MouseStay,jsx';
+import MixScroll from './components/MixScroll';
+import Parallax from './components/Parallax';
+import Reveal from './components/Reveal';
+import Parallax1 from './components/Parallax1';
 function App() {
   const [count, setCount] = useState(0)
   const profiles = [
@@ -22,30 +21,6 @@ function App() {
     { id: "10", name: "Addie Minstra" },
     { id: "11", name: "Anne Ortha" },
   ];
-  // const items = [
-  //   {
-  //     id: "john",
-  //     value: "John Doe",
-  //   },
-  //   {
-  //     id: "jane",
-  //     value: "Jane Doe",
-  //   },
-  //   {
-  //     id: "mary",
-  //     value: "Mary Phillips",
-  //   },
-  //   {
-  //     id: "robert",
-  //     value: "Robert",
-  //   },
-  //   {
-  //     id: "karius",
-  //     value: "Karius", 
-  //   },
-  // ];
-  // const HiItems = (items)=> 
-  //    console.log(items)
   const [results, setResults] = useState({profiles});
   const [selectedProfile, setSelectedProfile] = useState(
  {profiles}
@@ -56,8 +31,8 @@ function App() {
     const { target } = e;
     if (!target.value.trim()) return setResults([]);
 
-    const filteredValue = profiles.filter((profile) =>
-      profile.name.toLowerCase().includes(target.value)
+    const filteredValue = profiles.filter((profiles) =>
+      profiles.name.toLowerCase().includes(target.value)
     );
     // const filteredValue = profiles.filter((item) =>
     // item.toLowerCase().includes(searchTerm.toLowerCase()))
@@ -65,34 +40,18 @@ function App() {
   };
   return (
     <>
-    {/* <MouseStay/>  */}
-    <MouseFollowComponent/>
-    <TitleText/>
+    <Parallax1/>
+    <Reveal/>
+   <Parallax/>
+    {/* <MixScroll/> */}
+      <MouseFollowComponent/> 
      <LiveSearch
       results={results}
       value={selectedProfile?.name}
       renderItem={(item) => <p>{item.name}</p>}
       onChange={handleChange}
       onSelect={(item) => setSelectedProfile(item)}
-    />
-    <SearchBar  />
-       {/* <ReactSearchBox 
-        placeholder="Placeholder"
-        value="Doe"
-        data={items}
-        dropdownHoverColor='blue'
-        dropdownBorderColor='green'
-        callback={(record) => console.log(record)}
-      /> */}
-  {/* <Search items={items} />
- 
- <Search items={items}
-         placeholder='Pick your language'
-         maxSelected={3}
-         multiple={true}
-         onItemsChanged={ (items)=> 
-          console.log(items)}
-         /> */}
+    /> 
     </>
   )
 }

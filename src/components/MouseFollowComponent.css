@@ -1,14 +1,14 @@
 /* MouseFollowComponent.css */
 
-.container {
-    overflow: hidden;
+.containertext {
+    /* overflow: hidden; */
     position: relative;
 
+    display: flex;
   }
   
   .content {
     width: 100%; 
-    display: flex;
     align-items: center;
     justify-content: center; 
     background-color: #9e1616;

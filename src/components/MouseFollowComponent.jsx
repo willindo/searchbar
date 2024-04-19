@@ -47,11 +47,11 @@ const MouseFollowComponent = () => {
   }, []);
 
   return (
-    <div className="container" ref={containerRef}>
+    <div className="containertext" ref={containerRef}>
       {/* <div className="content"> */}
         {/* Your content here */}
         <h1 className='content'>Mouse-Follow Component</h1>
-        <p>Move your mouse to explore!</p>
+        {/* <p>Move your mouse to explore!</p> */}
       {/* </div> */}
     </div>
   );
