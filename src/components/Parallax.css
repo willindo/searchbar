@@ -19,7 +19,7 @@ section {
   
   h1 {
     color: white;
-    text-shadow: 1px 1px 3px black;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
     z-index: 1;
     font-size: 3em;
     font-weight: 400;

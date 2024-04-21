@@ -1,0 +1,22 @@
+.follow {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10;
+    background-color: #5c5f31;
+    /* z-index: 0; */
+    
+  }
+  
+  .flair{
+    width: 100px;
+    height: 100px;
+    background-color: #12aa36;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+  }

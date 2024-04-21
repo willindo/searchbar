@@ -1,19 +1,19 @@
 /* MouseFollowComponent.css */
 
 .containertext {
-    /* overflow: hidden; */
+    overflow: hidden;
     position: relative;
 
-    display: flex;
   }
   
   .content {
-    width: 100%; 
+    display: flex;
+    /* width: 100%;  */
     align-items: center;
     justify-content: center; 
     background-color: #9e1616;
     font-family: Arial, sans-serif;
     font-size: 24px;
-    color: #d21bd2;
+    color: #1bd274;
   }
   
