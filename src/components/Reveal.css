@@ -39,10 +39,10 @@ body {
   .ipsGrid > .ipsGrid_span7 {
     width: 37.44680851063829%;
   }
-  /* .ipsGrid > [class*="ipsGrid_span"] {
+  .ipsGrid > [class*="ipsGrid_span"] {
     float: left;
     margin-left: 2%;
-  } */
+  }
   .ipsGrid > [class*="ipsGrid_span"]:first-child {
     margin-left: 0;
   }

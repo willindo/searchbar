@@ -3,64 +3,55 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import "./MixScroll.css"
 // Register ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
 
+gsap.registerPlugin(ScrollTrigger);
 const MixScroll = () => {
   useEffect(() => {
-    gsap.utils.toArray(".slideText").forEach(text => {
-      gsap.timeline({
-        defaults: {ease: "none"},
-        scrollTrigger: {
-          scroller: text.closest(".horizSlider"),
-          horizontal: true,
-          trigger: text.closest(".slide"),
-          start: "left right",
-          end: "left left",
-          scrub: true
-        }
-      })
-      .fromTo(text, {x: 250}, {x: -250}, 0)
-      .from(text.nextElementSibling, {scale: 0.8}, 0)
+    gsap.defaults({ease: "none", duration: 2});
+
+    // create a sequence that moves 3 of the panels in from different directions 
+    const tl = gsap.timeline();
+    tl.from(".orange", {xPercent: -100})
+      .from(".purple", {xPercent: 100})
+      .from(".green", {yPercent: -100});
+    
+    // pin the container and link the animation to the scrollbar (scrub: true). We could easily embed this in the gsap.timeline() to shorten things a bit, but this is to show that you can create the ScrollTrigger separately if you prefer. 
+    ScrollTrigger.create({
+      animation: tl,
+      trigger: "#containerm",
+      start: "top top",
+      end: "+=4000", 
+      scrub: true,
+      pin: true,
+      anticipatePin: 1
     });
     
   }, []);
 
   return (
     <>
-   <h1 className="header-section">Scroll the slider to the right to see some parallax effects</h1>
-
-<section className="horizSlider">
-  <div className="slide">
-    <h2 className="slideText">Text title</h2>
-    <img width="1000" height="500" className="slideImage" src="https://source.unsplash.com/random/1000x500" alt="Filler image"/>
+    <div className="description panel blue">
+    <div><h1>Slide-in panels</h1>
+      <p>A simple animation linked to a ScrollTrigger with <code>scrub: true</code> creates a nifty effect.</p>
+      <div className="scroll-down">Scroll down<div className="arrow"></div></div>
+    </div>
   </div>
-  
-  <div className="slide">
-    <h2 className="slideText">Text title</h2>
-    <img width="1000" height="500" className="slideImage" src="https://source.unsplash.com/random/1000x500" alt="Filler image"/>
-  </div>
-  
-  <div className="slide">
-    <h2 className="slideText">Text title</h2>
-    <img width="1000" height="500" className="slideImage" src="https://source.unsplash.com/random/1000x500"/>
-  </div>
-  
-  <div className="slide">
-    <h2 className="slideText">Text title</h2>
-    <img width="1000" height="500" className="slideImage" src="https://source.unsplash.com/random/1000x500"/>
-  </div>
-  
-  <div className="slide">
-    <h2 className="slideText">Text title</h2>
-    <img width="1000" height="500" className="slideImage" src="https://source.unsplash.com/random/1000x500"/>
-  </div>
-</section>
 
-<h1 className="header-section">How do you like the photos?</h1>
+<div id="containerm">
+  <section className="panel red">
+    ONE
+  </section>
+  <section className="panel orange">
+    TWO
+  </section>
+  <section className="panel purple">
+    THREE
+  </section>
+  <section className="panel green">
+    FOUR
+  </section>
 
-
-
-
+</div>
 
       </>
   );

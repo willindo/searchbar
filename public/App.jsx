@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-import LiveSearch from './components/LiveSearch';
-import MouseFollowComponent from './components/MouseFollowComponent';
-import MixScroll from './components/MixScroll';
-import Parallax from './components/Parallax';
-import Reveal from './components/Reveal';
-import Parallax1 from './components/Parallax1';
+import LiveSearch from '../src/components/LiveSearch';
+import MouseFollowComponent from '../src/components/MouseFollowComponent';
+import MixScroll from '../src/components/MixScroll';
+import Parallax from '../src/components/Parallax';
+import Reveal from '../src/components/Reveal';
+import Parallax1 from '../src/components/Parallax1';
+import TitleText from '../src/components/TitlesText';
 function App() {
   const [count, setCount] = useState(0)
   const profiles = [
@@ -40,7 +41,8 @@ function App() {
   };
   return (
     <>
-     <LiveSearch
+    <TitleText/>
+     {/* <LiveSearch
       results={results}
       value={selectedProfile?.name}
       renderItem={(item) => <p>{item.name}</p>}
@@ -50,8 +52,8 @@ function App() {
     <Parallax1/>
     <Reveal/>
    <Parallax/>
+      <MouseFollowComponent/>  */}
     {/* <MixScroll/> */}
-      <MouseFollowComponent/> 
     </>
   )
 }

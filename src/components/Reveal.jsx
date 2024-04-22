@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import "./MixScroll.css"
+import "./Reveal.css"
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,7 +40,7 @@ const Reveal = () => {
           
           ScrollTrigger.create({
             trigger: elem,
-            markers: true,
+            // markers: true,
             onEnter: function() { animateFrom(elem) }, 
             onEnterBack: function() { animateFrom(elem, -1) },
             onLeave: function() { hide(elem) } // assure that the element is hidden when scrolled into view

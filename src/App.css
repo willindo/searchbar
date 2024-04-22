@@ -1,9 +1,9 @@
-.layoutapp{
+/* .layoutapp{ */
   /* height: 50px; */
   /* background-color: #aaaaaa; */
   /* height: 50px; */
 
-}
+/* } */
 nav{
   background-color: #2f08ce;
 }
@@ -13,7 +13,7 @@ nav ul{
   top: 0;
   display: flex;
   justify-content: space-around;
-  background-color: #9ca374;
+  /* background-color: #9ca374; */
   z-index: 1;
   box-sizing: border-box;
   border: none;
@@ -21,6 +21,11 @@ nav ul{
 }
 .hpage{
   width: 50%;
-  background-color: #2c3952;
+  background-color: #8e9219;
   color: #aaa;
+}
+.homeul li{
+  color: #fff;
+  /* background-color: #0cb91b; */
+  width: max-content;
 }
