@@ -16,7 +16,7 @@ body {
   div#parallax-bg-2 {
     position: fixed;
     width: 1200px;
-    top: 0;
+    top: 50;
     left: 50%;
     margin-left: -600px;
     z-index: 2;

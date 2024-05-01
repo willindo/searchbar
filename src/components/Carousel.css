@@ -1,0 +1,17 @@
+/* .just{
+    height: 200px;
+  } */
+  .boxContainer {
+    display: flex;
+    overflow: hidden;
+    width: fit-content;
+  background-color: #94b083;
+  }
+  
+  .box {
+    width: 200px;
+    /* height: 400px; */
+    /* background-color: #ff0000; */
+    /* border: 1px dotted teal ; */
+    font-size: xx-large;
+  }

@@ -1,49 +1,40 @@
-import { Routes, Route, Outlet, Link,useRoutes, useParams } from "react-router-dom";
-import { useState,useRef } from 'react'
-import './App.css'
-import gsap from 'gsap'
-// import {useGSAP} from '@gsapreact'
-import LiveSearch from './components/LiveSearch';
-import MouseFollowComponent from './components/MouseFollowComponent';
-import MixScroll from './components/MixScroll';
-import Parallax from './components/Parallax';
-import Reveal from './components/Reveal';
-import Parallax1 from './components/Parallax1';
-import Follow from "./components/Follow";
-import Addremove from "./components/Addremove";
-import TitleText from "./components/TitlesText";
+import React, { useState,useEffect,useRef } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import {BrowserRouter as Router, Routes, Route, Outlet,Link } from 'react-router-dom';
+import Font1 from "./components/Font1";
+import Parallax from "./components/Parallax";
+import Parallax1 from "./components/Parallax1";
+import gsap from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import Carousel from "./components/Carousel";
+import { Draggable } from "gsap/Draggable";
+gsap.registerPlugin(Draggable)
 export default function App() {
-  const profiles = [
-    { id: "1", name: "Allie Grater" },
-    { id: "2", name: "Aida Bugg" },
-    { id: "3", name: "Gabrielle" },
-    { id: "4", name: "Grace" },
-    { id: "5", name: "Hannah" },
-    { id: "6", name: "Heather" },
-    { id: "7", name: "John Doe" },
-    { id: "8", name: "Anne Teak" },
-    { id: "9", name: "Audie Yose" },
-    { id: "10", name: "Addie Minstra" },
-    { id: "11", name: "Anne Ortha" },
-  ];
-  const [results, setResults] = useState({profiles});
-  const [selectedProfile, setSelectedProfile] = useState(
- {profiles}
-  );
   return (
-     <div>
+    <div>
+
+      {/* Routes nest inside one another. Nested route paths build upon
+            parent route paths, and nested route elements render inside
+            parent route elements. See the note about <Outlet> below. */}
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
           <Route path="dashboard" element={<Dashboard />} />
+          <Route path="sample" element={<Sample />} >
+
+          <Route path="sample1" element={<Sample1 />} />
+          <Route path="sample2" element={<Sample2 />} >
+
+          <Route path="new" element={<Justsee />} />
+          <Route path="fun" element={<Anothersee />} />
+
+          </Route>
+          <Route path="sample3" element={<Sample3 />} />
+          </Route>
           <Route path="*" element={<NoMatch />} />
-          <Route path="about" element={<About />}/>
-          <Route path="sample1" element={<Sample1 />}/>
-          <Route path="sample2" element={<Sample2 />}/>
-          <Route path="sample" element={<Sample />}/>
-          {/* Using path="*"" means "match anything", so this route
-                acts like a catch-all for URLs that we don't have explicit
-                routes for. */}
         </Route>
       </Routes>
     </div>
@@ -52,11 +43,9 @@ export default function App() {
 
 function Layout() {
   return (
-    <div className="layoutapp">
-      {/* A "layout route" is a good place to put markup you want to
-          share across all the pages on your site, like navigation. */}
-      <nav>
-        <ul>
+    <>
+      <nav >
+        <ul  className="nav1">
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -64,104 +53,106 @@ function Layout() {
             <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/nothing-here">Nothing Here</Link>
+            <Link to="/sample">Samples</Link>
           </li>
           <li>
             <Link to="/dashboard">Dashboard</Link>
           </li>
           <li>
-            <Link to="/sample">Sample</Link>
-          </li>
-          <li>
-            <Link to="/sample1">Sample1</Link>
-          </li>
-          <li>
-            <Link to="/sample2">Sample2</Link>
+            <Link to="/nothing-here">Nothing Here</Link>
           </li>
         </ul>
       </nav>
 
 
-      {/* An <Outlet> renders whatever child route is currently active,
-          so you can think about this <Outlet> as a placeholder for
-          the child routes we defined above. */}
       <Outlet />
-    </div>
+        </>
   );
 }
 
-function Home() {
-  return (
-    <>
-    <div className="hpage" >
-    <ul className="homeul" >
-          <li>
-          </li>
-          {/* <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/nothing-here">Nothing Here</Link>
-          </li>
-          <li>
-            <Link to="/dashboard">Dashboard</Link>
-          </li> */}
-          <li>
-            <Link to="/sample">Sample</Link>
-          </li>
-          <li>
-            <Link to="/sample1">Sample1</Link>
-          </li>
-          <li>
-            <Link to="/sample2">Sample2</Link>
-          </li>
-        </ul>
-    </div>
-    </>
-  );
+export  function Home() {
+  const elementRef = useRef(null);
+
+    useEffect(() => {
+        Draggable.create(elementRef.current);
+    }, []);
+
+    return <div ref={elementRef} style={{width: 100, height: 100, backgroundColor: 'red'}}>Drag me!</div>;
 }
 
 function About() {
   return (
-    <>
-      <Follow/>
-      <MouseFollowComponent/>
-      {/* <LiveSearch
-      results={selectedProfile}
-      value={selectedProfile?.name}
-      renderItem={(item) => <p>{item.name}</p>}
-      onChange={handleChange}
-      onSelect={(item) => setSelectedProfile(item)}
-    />  */}
-    </>
+    <div className="font">
+     <Font1/>
+    </div>
   );
 }
 
-function Dashboard() {
-  return (
-     <Parallax/>
-    // <TitleText/>
+function Sample() {
+return (
+  <>
+       <ul>
+          <li>
+            <Link to="/sample/sample1">Simple one</Link>
+          </li>
+          <li>
+            <Link to="/sample/sample2">Another One</Link>
+          </li>
+        </ul>
+        <Outlet/>
+    </>
   );
 }
-function Sample() {
-  return(
-    <Parallax1/>
-  )
-}
-function Sample1() {
-  return(
-    <Reveal/>
-  )
-}
-function Sample2() {
+function Sample1(params) {
   return(
     <>
-    <Addremove/>
+    <Parallax/>
     </>
   )
+}
+function Sample2(params) {
+  return(
+    <>
+  <div>
+       <ul>
+          <li>
+            <Link to="/sample/sample2/new">See</Link>
+          </li>
+          <li>
+            <Link to="/sample/sample2/fun">Fun</Link>
+          </li>
+        </ul>
+        <Outlet/>
+    </div>
+    </>
+  )
+}
+function Sample3(params) {
+  return(
+    <>
+    <h1>Sample3</h1>
+    </>
+  )
+}
+function Justsee() {
+  return(
+    <>
+{/* <h1>Just See</h1> */}
+    <Parallax1/>
+    </>
+  )
+}
+function Anothersee() {
+  return(
+  <Carousel/> 
+  )
+}
+  function Dashboard() {
+  return (
+    <div>
+      <h2>Dashboard</h2>
+    </div>
+  );
 }
 
 function NoMatch() {
@@ -170,6 +161,9 @@ function NoMatch() {
       <h2>Nothing to see here!</h2>
       <p>
         <Link to="/">Go to the home page</Link>
+        <Font1/>
       </p>
     </div>
-  );}
+  );
+}
+
