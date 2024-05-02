@@ -3,7 +3,6 @@ import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import './Carousel.css'
-import { Home } from "../App";
 const Carousel = () => {
     const tech = ['React', 'NextJs', 'Typescript', 'Gsap', 'RFiber', 'BabylonJs', 'Tailwind', 'Bootstrap', 'Less', 'Sass', 'ReactQuery', 'React-Router'];
     const boxContainerRef = useRef(null);

@@ -4,7 +4,6 @@ import { Canvas } from "@react-three/fiber";
  function Font1  ()  {
   return (
     <>
-
     <Canvas>
     <PerspectiveCamera makeDefault position={[0,0,5]} />
     <ambientLight intensity={1} />

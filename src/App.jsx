@@ -10,6 +10,10 @@ import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import Carousel from "./components/Carousel";
 import { Draggable } from "gsap/Draggable";
+import Daggable1 from "./components/Daggable1";
+import MouseFollowComponent from "./components/MouseFollowComponent";
+import Pinned from "./components/Pinned";
+import Description from "./components/Description";
 gsap.registerPlugin(Draggable)
 export default function App() {
   return (
@@ -47,10 +51,10 @@ function Layout() {
       <nav >
         <ul  className="nav1">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Animation Skew</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about">Know me</Link>
           </li>
           <li>
             <Link to="/sample">Samples</Link>
@@ -64,27 +68,29 @@ function Layout() {
         </ul>
       </nav>
 
-
       <Outlet />
         </>
   );
 }
 
 export  function Home() {
-  const elementRef = useRef(null);
-
-    useEffect(() => {
-        Draggable.create(elementRef.current);
-    }, []);
-
-    return <div ref={elementRef} style={{width: 100, height: 100, backgroundColor: 'red'}}>Drag me!</div>;
+  return (
+    <>
+    <h1>Home</h1>
+    <Pinned/>
+    </>
+  )
 }
 
 function About() {
   return (
+    <>
+    <Carousel/>
     <div className="font">
      <Font1/>
     </div>
+     <Description/>
+    </>
   );
 }
 
@@ -157,13 +163,17 @@ function Anothersee() {
 
 function NoMatch() {
   return (
+    <>
+    
     <div>
       <h2>Nothing to see here!</h2>
       <p>
         <Link to="/">Go to the home page</Link>
-        <Font1/>
       </p>
+      <MouseFollowComponent/>
+      <Daggable1/>
     </div>
+    </>
   );
 }
 

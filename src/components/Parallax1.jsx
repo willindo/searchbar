@@ -8,17 +8,20 @@ gsap.registerPlugin(ScrollTrigger);
 const Parallax1 = () => {
   useEffect(() => {
     gsap.to(".parallax-bg", {
-        scrollTrigger: {
-          scrub: true
-        }, 
-        y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
-        ease: "none"
-      });
+      scrollTrigger: {
+        scrub: true
+      }, 
+      y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
+      ease: "none"
+    });
+    
     
   }, []);
 
   return (
     <>
+    <div className='para1'>
+
 <div id="parallax-bg-3" className="parallax-bg" data-speed=".75">
   <div id="bg-3-1"></div>
   <div id="bg-3-2"></div>
@@ -41,6 +44,8 @@ const Parallax1 = () => {
   <div id="bg-1-5"></div>
 </div>
 <div id="ground"></div>
+
+    </div>
       </>
   );
 };

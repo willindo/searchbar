@@ -3,17 +3,21 @@
 .containertext {
     overflow: hidden;
     position: relative;
-
+    height: 300px;
+    background-color: #249e16;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
   .content {
-    display: flex;
-    /* width: 100%;  */
-    align-items: center;
-    justify-content: center; 
+    width: fit-content;
     background-color: #9e1616;
     font-family: Arial, sans-serif;
     font-size: 24px;
     color: #1bd274;
   }
-  
+  span{
+    width: 30vw;
+border: 2px solid yellow;
+  }
