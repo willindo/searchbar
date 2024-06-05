@@ -1,0 +1,20 @@
+.group.reorder {
+    flex-direction: column;
+  }
+  .drctn{
+    width: 100%;
+  }
+  .group {
+    /* width: 740px; */
+    width: 90%;
+    height: auto;
+    margin: 1rem auto;
+    padding: 4px;
+   /* border: solid 2px var(--color-surface-white); */
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    /* color: var(--color-just-black); */
+    position: relative;
+    border-radius: 10px;
+  }
