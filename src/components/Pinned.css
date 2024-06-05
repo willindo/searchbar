@@ -6,7 +6,9 @@ body > img {
   margin-bottom: 20vh;
 }
 
-
+img{
+  max-width: 40vw;
+}
 
 h1 {
   color: white;

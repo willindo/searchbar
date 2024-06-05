@@ -106,7 +106,6 @@ function Layout() {
 export  function Home() {
   return (
     <>
-    <h1>Home</h1>
     <Pinned/>
     </>
   )
@@ -117,7 +116,7 @@ function About() {
     <>
     <Carousel/>
     <div className="font">
-     {/* <Font1/> */}
+     <Font1/>
     </div>
      <Description/>
     </>
@@ -138,8 +137,6 @@ function Sample() {
             <Link to="/sample/sample3">Sample3</Link>
           </li>
         </ul>
-        {/* <div className="cust"  > */}
-        {/* </div> */}
         <Outlet/>
     </>
   );
@@ -178,7 +175,6 @@ function Sample3(params) {
 function Justsee() {
   return(
     <>
-{/* <h1>Just See</h1> */}
     <Parallax1/>
     </>
   )
@@ -196,27 +192,6 @@ function Anothersee() {
   )
 }
   function Clone() {
-    const Dropdown = () => {
-      const [isOpen, setIsOpen] = useState(false);
-      
-      return (
-        <div className="dropdown" 
-        onMouseEnter={() => setIsOpen(true)} 
-        onMouseLeave={() => setIsOpen(false)}>
-        
-          <button>
-          Menu</button>
-    
-          {isOpen && (
-            <ul className="dropdown-menu">
-              <li><Link to="/clone/clon1">Page 1</Link></li>
-              <li><Link to="/clone/clone2">Page 2</Link></li>
-              <li><Link to="/clone/clone3">Page 3</Link></li>
-            </ul>
-          )}
-        </div>
-      );
-    };
     
     const OPTIONS = { loop: true }
     const SLIDE_COUNT = 5
@@ -224,7 +199,6 @@ function Anothersee() {
     
     return (
       <>
-    {/* <Dropdown/> */}
       <EmblaCarousel slides={SLIDES} options={OPTIONS} />
     </>
     
