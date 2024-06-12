@@ -1,25 +1,25 @@
-.embla {
+.emb {
     max-width: 48rem;
     margin: auto;
     --slide-height: 19rem;
     --slide-spacing: 1rem;
     --slide-size: 55%;
   }
-  .embla__viewport {
+  .embvp {
     overflow: hidden;
   }
-  .embla__container {
+  .embcntnr {
     backface-visibility: hidden;
     display: flex;
     touch-action: pan-y pinch-zoom;
     margin-left: calc(var(--slide-spacing) * -1);
   }
-  .embla__slide {
+  .embsld {
     flex: 0 0 var(--slide-size);
     min-width: 0;
     padding-left: var(--slide-spacing);
   }
-  .embla__slide__number {
+  .embsldnmbr {
     box-shadow: inset 0 0 0 0.2rem rgb(17, 146, 43);
     border-radius: 1.8rem;
     font-size: 4rem;

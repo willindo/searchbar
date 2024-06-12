@@ -2,9 +2,12 @@ import React, { useState,useEffect,useRef } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import "./components/Embla.css"
-import "./components/Embla1.css"
-// import "./components/Embla2.css"
+import {
+  HamburgerMenuIcon,
+  DotFilledIcon,
+  CheckIcon,
+  ChevronRightIcon,
+} from '@radix-ui/react-icons';
 import {BrowserRouter as Router, Routes, Route, Outlet,Link } from 'react-router-dom';
 import gsap from "gsap";
 import {useGSAP} from '@gsap/react'
@@ -21,7 +24,15 @@ import Description from "./components/Description";
 import Flipblock from "./components/Flipblock";
 import EmblaCarousel from "./components/EmblaCarousel";
 import EmblaCarousel1 from "./components/EmblaCarousel1";
-import EmblaCarousel2 from "./components/EmblaCarousel2";
+import EmblaCarousel3 from "./components/EmblaCarousel3";
+import ComboBox from "./components/AutoComplete";
+// import AntDesignGrid from "./components/DataView";  
+import DataGridDemo from "./components/DataView1";
+import DropdownMenuDemo from "./components/Dropdown";
+import MenubarDemo from "./components/Menubar";
+import NavigationMenuDemo from "./components/NavigationMenu";
+import SelectDemo from "./components/Select";
+import AccordionExpandDefault from "./components/Accordian";
 gsap.registerPlugin(Draggable)
 export default function App() {
  
@@ -57,28 +68,28 @@ export default function App() {
 
 function Layout() {
  
-  useGSAP((context) => {
-    // let ref = useRef()
-    let lis = document.querySelectorAll("li");
-    lis.forEach((l) => {
-      // Create a GSAP animation for the current l
-      let hoverEffect = gsap.to(l, {
-        backgroundColor:'teal',
-        borderColor:'yellow',
-          scale: 1.2,
-          duration: 1.5,
-          paused: true,
-          ease: "power1.inOut"
-      });
-      // Add event listeners to play and reverse the animation on hover
-      l.addEventListener("mouseenter", () => hoverEffect.play());
-      l.addEventListener("mouseleave", () => hoverEffect.reverse());
-  });
-  }, []);
+  // useGSAP((context) => {
+  //   // let ref = useRef()
+  //   let lis = document.querySelectorAll("li");
+  //   lis.forEach((l) => {
+  //     // Create a GSAP animation for the current l
+  //     let hoverEffect = gsap.to(l, {
+  //       backgroundColor:'teal',
+  //       borderColor:'yellow',
+  //         scale: 1.2,
+  //         duration: 1,
+  //         paused: true,
+  //         ease: "power1.inOut"
+  //     });
+  //     // Add event listeners to play and reverse the animation on hover
+  //     l.addEventListener("mouseenter", () => hoverEffect.play());
+  //     l.addEventListener("mouseleave", () => hoverEffect.reverse());
+  // });
+  // }, []);
 
   return (
     <>
-      <nav >
+      <nav className="laynav" >
         <ul  className="nav1">
           <li>
             <Link to="/"   >Animation Skew</Link>
@@ -112,13 +123,19 @@ export  function Home() {
 }
 
 function About() {
+  const OPTIONS2 = { dragFree: true, loop: true }
+  const SLIDE_COUNT = 5
+  const SLIDES2 = Array.from(Array(SLIDE_COUNT).keys())
   return (
     <>
+
+    {/* <ComboBox/> */}
+<EmblaCarousel1 options={OPTIONS2} slides={SLIDES2} />
     <Carousel/>
-    <div className="font">
-     <Font1/>
-    </div>
-     <Description/>
+    {/* <div className="font"> */}
+     {/* <Font1/> */}
+    {/* </div> */}
+     {/* <Description/> */}
     </>
   );
 }
@@ -126,7 +143,7 @@ function About() {
 function Sample() {
   return (
     <>
-       <ul>
+       <ul className="sampleul" >
           <li>
             <Link to="/sample/sample1">Simple one</Link>
           </li>
@@ -166,9 +183,15 @@ function Sample2(params) {
   )
 }
 function Sample3(params) {
-  return(
-    <>
-    <h1>Sample3</h1>
+return(
+  <>
+  <div style={{ height:'500px' }} >
+
+    <Carousel/>
+    <HamburgerMenuIcon className="dot"/>
+    <DotFilledIcon className="dot" style={{ height:'20px',color:'green',backgroundColor:'gold',fontSize:'100px' }} />
+    <ChevronRightIcon  style={{ height:'20px',color:'green',backgroundColor:'blue',fontSize:'100px' }}/>
+  </div>
     </>
   )
 }
@@ -180,13 +203,12 @@ function Justsee() {
   )
 }
 function Anothersee() {
-  const OPTIONS1 = { dragFree: true, loop: true }
-  const SLIDE_COUNT1 = 5
-  const SLIDES1 = Array.from(Array(SLIDE_COUNT1).keys())
+  const OPTIONS2 = {loop:true,speed:0.5,stopOnMouseEnter:false}
+  const SLIDES2 = ['Next.js','React', 'Express.js','Mongodb','Tailwind css','GSAP','Three.js','R3Fibre','Babylon.js','Sass']
   return(
     <>
-<EmblaCarousel1 slides={SLIDES1} options={OPTIONS1} />
-  <Carousel/> 
+  {/* <Carousel/>  */}
+  <EmblaCarousel3 options={OPTIONS2} slides={SLIDES2} />
   {/* <Flipblock/> */}
     </>
   )
@@ -196,30 +218,41 @@ function Anothersee() {
     const OPTIONS = { loop: true }
     const SLIDE_COUNT = 5
     const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+    const OPTIONS2 = { dragFree: true, loop: true }
+    const SLIDE_COUNT2 = 5
+    const SLIDES2 = Array.from(Array(SLIDE_COUNT2).keys())
     
     return (
       <>
+      {/* <AccordionExpandDefault/> */}
       <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+      <EmblaCarousel1 options={OPTIONS2} slides={SLIDES2} />
     </>
     
   );
 }
 
 function NoMatch() {
-  const OPTIONS = { axis: 'y' }
-  const SLIDE_COUNT = 5
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
   return (
     <>
-{/* <EmblaCarousel2 slides={SLIDES} options={OPTIONS} /> */}
-    <div>
+    <DropdownMenuDemo/>
+    <ComboBox/>
+    {/* <div className="menucheck"  > */}
+    <NavigationMenuDemo/>
+    {/* </div> */}
+    <MenubarDemo/>
+    <DataGridDemo/>
+      
+    <SelectDemo/>
+    {/* <AntDesignGrid /> */}
+    {/* <div>
       <h2>Nothing to see here!</h2>
       <p>
         <Link to="/">Go to the home page</Link>
       </p>
       <MouseFollowComponent/>
       <Daggable1/>
-    </div>
+    </div> */}
     </>
   );
 }

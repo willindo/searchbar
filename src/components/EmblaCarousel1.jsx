@@ -6,7 +6,7 @@ import {
   usePrevNextButtons
 } from './EmblaCAB'
 import { DotButton, useDotButton } from './EmblaCDB'
-
+import './Embla1.css'
 const TWEEN_FACTOR_BASE = 0.2
 
 const EmblaCarousel = (props) => {
@@ -67,7 +67,7 @@ const EmblaCarousel = (props) => {
 
         const translate = diffToTarget * (-1 * tweenFactor.current) * 100
         const tweenNode = tweenNodes.current[slideIndex]
-        tweenNode.style.transform = `translateX(${translate}%)`
+        // tweenNode.style.transform = `translateX(${translate}%)`
       })
     })
   }, [])
@@ -88,13 +88,13 @@ const EmblaCarousel = (props) => {
   }, [emblaApi, tweenParallax])
 
   return (
-    <div className="embla">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
+    <div className="embla1">
+      <div className="embla__viewport1" ref={emblaRef}>
+        <div className="embla__container1">
           {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__parallax">
-                <div className="embla__parallax__layer">
+            <div className="embla__slide1" key={index}>
+              <div className="embla__parallax1">
+                <div className="embla__parallax__layer1">
                   <img
                     className="embla__slide__img embla__parallax__img"
                     src={`https://picsum.photos/600/350?v=${index}`}

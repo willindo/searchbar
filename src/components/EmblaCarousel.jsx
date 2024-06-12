@@ -6,7 +6,7 @@ import {
   usePrevNextButtons
 } from './EmblaCAB'
 import { DotButton, useDotButton } from './EmblaCDB'
-
+import './Embla.css'
 const TWEEN_FACTOR_BASE = 0.52
 
 const numberWithinRange = (number, min, max) =>
@@ -71,7 +71,7 @@ const EmblaCarousel = (props) => {
         const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor.current)
         const scale = numberWithinRange(tweenValue, 0, 1).toString()
         const tweenNode = tweenNodes.current[slideIndex]
-        tweenNode.style.transform = `scale(${scale})`
+        // tweenNode.style.transform = `scale(${scale})`
       })
     })
   }, [])
@@ -92,12 +92,12 @@ const EmblaCarousel = (props) => {
   }, [emblaApi, tweenScale])
 
   return (
-    <div className="embla">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
+    <div className="emb">
+      <div className="embvp" ref={emblaRef}>
+        <div className="embcntnr">
           {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">{index + 1}</div>
+            <div className="embsld" key={index}>
+              <div className="embsldnmbr">{index + 1}</div>
             </div>
           ))}
         </div>
