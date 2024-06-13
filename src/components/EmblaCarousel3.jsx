@@ -1,11 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import AutoScroll from 'embla-carousel-auto-scroll'
-import {
-  NextButton,
-  PrevButton,
-  usePrevNextButtons
-} from './EmblaCarouselArrowButton'
 import './Embla3.css'
 const EmblaCarousel3 = (props) => {
   const { slides, options } = props

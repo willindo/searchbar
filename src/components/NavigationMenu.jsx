@@ -70,7 +70,7 @@ const NavigationMenuDemo = () => {
         </NavigationMenu.Item>
 
         <NavigationMenu.Item>
-          <NavigationMenu.Link className="NavigationMenuLink" href="/Horizontal">
+          <NavigationMenu.Link className="NavigationMenuLink" href="/horizontal">
             GSAP1
           </NavigationMenu.Link>
         </NavigationMenu.Item>
