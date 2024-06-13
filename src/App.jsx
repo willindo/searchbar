@@ -33,6 +33,7 @@ import MenubarDemo from "./components/Menubar";
 import NavigationMenuDemo from "./components/NavigationMenu";
 import SelectDemo from "./components/Select";
 import AccordionExpandDefault from "./components/Accordian";
+import Horiz from "./components/Horiz";
 gsap.registerPlugin(Draggable)
 export default function App() {
  
@@ -46,6 +47,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />}/>
+          <Route path="horizontal" element={<Horiz />}/>
           <Route path="clone" element={<Clone />} >
             <Route path="clone1" element= {<Sample/>  }/>
             <Route path="clone2" element= {<Sample2/>  }/>

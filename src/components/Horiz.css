@@ -1,0 +1,24 @@
+.container {
+  /* This will hide the overflow content */
+  overflow: hidden;
+  /* This will make the container act like a viewport for our scrolling content */
+  position: relative;
+  /* Set the height of the container */
+  height:100vh;
+  /* Set the width of the container */
+  width: 700%;
+  display: flex;
+}
+
+.panel {
+  /* height: 50vh; */
+  width: 100vw;
+}
+
+/* Add colors to each panel for visibility */
+.blue { background-color: blue; }
+.red { background-color: red; }
+.orange { background-color: orange; }
+.purple { background-color: purple; }
+.green { background-color: green; }
+.gray { background-color: gray; }
