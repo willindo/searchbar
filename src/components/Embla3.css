@@ -39,6 +39,7 @@
   align-items: center;
   justify-content: center;
   height: 100px;
+  color: darkgoldenrod;
   padding-inline: 1rem;
   /* border: 2px double purple; */
   /* height: var(--slide-height); */

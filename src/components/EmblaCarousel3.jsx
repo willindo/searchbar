@@ -14,49 +14,7 @@ const EmblaCarousel3 = (props) => {
   ])
   const [isPlaying, setIsPlaying] = useState(false)
 
-  // const {
-  //   prevBtnDisabled,
-  //   nextBtnDisabled,
-  //   onPrevButtonClick,
-  //   onNextButtonClick
-  // } = usePrevNextButtons(emblaApi)
 
-  // const onButtonAutoplayClick = useCallback(
-  //   (callback) => {
-  //     const autoScroll = emblaApi?.plugins()?.autoScroll
-  //     if (!autoScroll) return
-
-  //     const resetOrStop =
-  //       autoScroll.options.stopOnInteraction === false
-  //         ? autoScroll.reset
-  //         : autoScroll.stop
-
-  //     resetOrStop()
-  //     callback()
-  //   },
-  //   [emblaApi]
-  // )
-
-  // const toggleAutoplay = useCallback(() => {
-  //   const autoScroll = emblaApi?.plugins()?.autoScroll
-  //   if (!autoScroll) return
-
-  //   const playOrStop = autoScroll.isPlaying()`
-  //     ? autoScroll.stop
-  //     : autoScroll.play
-  //   playOrStop()
-  // }, [emblaApi])
-
-  // useEffect(() => {
-  //   const autoScroll = emblaApi?.plugins()?.autoScroll
-  //   if (!autoScroll) return
-
-  //   setIsPlaying(autoScroll.isPlaying())
-  //   emblaApi
-  //     .on('autoScroll:play', () => setIsPlaying(true))
-  //     .on('autoScroll:stop', () => setIsPlaying(false))
-  //     .on('reInit', () => setIsPlaying(autoScroll.isPlaying()))
-  // }, [emblaApi])
 
   return (
     <div className="embla em1">
