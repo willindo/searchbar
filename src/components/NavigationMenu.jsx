@@ -48,24 +48,28 @@ const NavigationMenuDemo = () => {
           </NavigationMenu.Trigger>
           <NavigationMenu.Content className="NavigationMenuContent">
             <ul className="List two">
-              <ListItem title="Pinning Section" href="/pinningsection">
+              <ListItem >
+              <Link className="NavigationMenuLink" to='/task'  >Task</Link>
                 Build high-quality, accessible design systems and web apps.
               </ListItem>
-              <ListItem title="Connected" href="/connected">
+              <ListItem >
+              <Link className="NavigationMenuLink" to='/task1'  >Task1</Link>
                 A quick tutorial to get you up and running with Radix Primitives.
               </ListItem>
               <ListItem >
-              <Link className="NavigationMenuLink" to='/task'  >Task</Link>
+              <Link className="NavigationMenuLink" to='/task2'  >Task2</Link>
                 Unstyled and compatible with any styling solution.
               </ListItem>
-              <ListItem title="Task1" href="/task1">
+              <ListItem >
+              <Link className="NavigationMenuLink" to='/pinningsection'  >Pinned Section</Link>
                 Use CSS keyframes or any animation library of your choice.
               </ListItem>
-              <ListItem title="Task2" href="/task2">
+              <ListItem >
+              <Link className="NavigationMenuLink" to='/flipblock'  >Flipblock</Link>
                 Tested in a range of browsers and assistive technologies.
               </ListItem>
-              <ListItem title="Releases" href="/primitives/docs/overview/releases">
-          <NavigationMenu.Link className="NavigationMenuLink" href="/pinningsection">
+              <ListItem >
+          <NavigationMenu.Link >
             Sectionpin 
           </NavigationMenu.Link>
                 Radix Primitives releases and their changelogs.
