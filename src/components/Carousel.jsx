@@ -5,16 +5,18 @@ import {useGSAP} from '@gsap/react'
 gsap.registerPlugin(ScrollTrigger,useGSAP);
 import './Carousel.css'
 const Carousel = () => {
-    const tech = ['React', 'NextJs', 'Typescript', 'Gsap', 'RFiber', 'BabylonJs', 'Tailwind', 'Bootstrap', 'Less', 'Sass', 'ReactQuery', 'React-Router'];
+    const tech = ['React', 'NextJs', 'Typescript', 'Gsap', 'R3Fiber', 'BabylonJs', 'Tailwind', 'Bootstrap', 'Less', 'Sass', 'ReactQuery', 'React-Router'];
     const container = useRef(null);
     useGSAP (()=> {
             gsap.to('.crsl', {
-                // xPercent: -101,
-                x:'-100vw',
+                xPercent: -50 *(tech.length-1),
+                // x:'-100vw',
                 repeat: -1,
-                duration:6 ,
-                ease: "linear"
-            }).totalProgress(0.6);
+                duration:10 ,
+                ease: "linear",
+                // yoyo:true,
+                yoyoEase:true
+            });
         },{scope:container} );
 
     return (

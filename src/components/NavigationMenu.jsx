@@ -28,7 +28,7 @@ const NavigationMenuDemo = () => {
                 </NavigationMenu.Link>
               </li>
 
-              <ListItem href="https://stitches.dev/" title="Stitches">
+              <ListItem href="/flipblock" title="Flipblock">
                 CSS-in-JS with best-in-class developer experience.
               </ListItem>
               <ListItem href="/colors" title="Colors">
@@ -47,22 +47,25 @@ const NavigationMenuDemo = () => {
           </NavigationMenu.Trigger>
           <NavigationMenu.Content className="NavigationMenuContent">
             <ul className="List two">
-              <ListItem title="Introduction" href="/primitives/docs/overview/introduction">
+              <ListItem title="Pinning Section" href="/pinningsection">
                 Build high-quality, accessible design systems and web apps.
               </ListItem>
-              <ListItem title="Getting started" href="/primitives/docs/overview/getting-started">
+              <ListItem title="Connected" href="/connected">
                 A quick tutorial to get you up and running with Radix Primitives.
               </ListItem>
-              <ListItem title="Styling" href="/primitives/docs/guides/styling">
+              <ListItem title="Task" href="/task">
                 Unstyled and compatible with any styling solution.
               </ListItem>
-              <ListItem title="Animation" href="/primitives/docs/guides/animation">
+              <ListItem title="Task1" href="/task1">
                 Use CSS keyframes or any animation library of your choice.
               </ListItem>
-              <ListItem title="Accessibility" href="/primitives/docs/overview/accessibility">
+              <ListItem title="Task2" href="/task2">
                 Tested in a range of browsers and assistive technologies.
               </ListItem>
               <ListItem title="Releases" href="/primitives/docs/overview/releases">
+          <NavigationMenu.Link className="NavigationMenuLink" href="/pinningsection">
+            Sectionpin
+          </NavigationMenu.Link>
                 Radix Primitives releases and their changelogs.
               </ListItem>
             </ul>
@@ -71,7 +74,7 @@ const NavigationMenuDemo = () => {
 
         <NavigationMenu.Item>
           <NavigationMenu.Link className="NavigationMenuLink" href="/horizontal">
-            GSAP1
+            HORIZONTAL
           </NavigationMenu.Link>
         </NavigationMenu.Item>
 

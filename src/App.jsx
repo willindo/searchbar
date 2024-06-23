@@ -34,6 +34,11 @@ import NavigationMenuDemo from "./components/NavigationMenu";
 import SelectDemo from "./components/Select";
 import AccordionExpandDefault from "./components/Accordian";
 import Horiz from "./components/Horiz";
+import PinningSection from "./components/Horiz copy";
+import Connected from "./components/Connected";
+import Task from "./components/Task";
+import Task1 from "./components/Task1";
+import Task2 from "./components/Task2";
 gsap.registerPlugin(Draggable)
 export default function App() {
  
@@ -47,7 +52,13 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />}/>
+          <Route path="connected" element={<Connected />}/>
+          <Route path="pinningsection" element={<PinningSection />}/>
           <Route path="horizontal" element={<Horiz />}/>
+          <Route path="Task" element={<Task/> }/>
+          <Route path="Task1" element={<Task1/> }/>
+          <Route path="Task2" element={ <Task2/>}/>
+          <Route path="flipblock" element={<Flipblock/>}/>
           <Route path="clone" element={<Clone />} >
             <Route path="clone1" element= {<Sample/>  }/>
             <Route path="clone2" element= {<Sample2/>  }/>
@@ -132,7 +143,7 @@ function About() {
     <>
 
     {/* <ComboBox/> */}
-<EmblaCarousel1 options={OPTIONS2} slides={SLIDES2} />
+{/* <EmblaCarousel1 options={OPTIONS2} slides={SLIDES2} /> */}
     <Carousel/>
     {/* <div className="font"> */}
      {/* <Font1/> */}

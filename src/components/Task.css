@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap');
+
+/* body {
+  color: white;
+  background-color: black;
+  padding: 0 20px;
+  font-family: 'Signika Negative';
+  max-width: 800px;
+  margin: 0 auto;
+} */
+
+button {
+  padding: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.column {
+  border: 5px solid #7B2389;
+  padding: 15px;
+  border-radius: 5px;
+}
+#container1 {
+  margin-right: 25px;
+}
+
+#flex {
+  display: flex;
+}
+#flex > div {
+  width: 50%;
+}
+
+.bar {
+  margin-bottom: 3px;
+  height: 26px;
+  background-color: #777;
+  border-radius: 13px;
+}
