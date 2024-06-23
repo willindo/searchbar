@@ -22,7 +22,7 @@ const Task = () => {
     gsap.utils.shuffle(bars);
 
     // Switch the parent
-    let newContainer = 
+    let newContainer =  
       bars[0].parentElement === container1 ? container2 : container1;
     bars.forEach((bar) => newContainer.appendChild(bar));
     

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import classNames from 'classnames';
 import { CaretDownIcon } from '@radix-ui/react-icons';
@@ -53,7 +54,8 @@ const NavigationMenuDemo = () => {
               <ListItem title="Connected" href="/connected">
                 A quick tutorial to get you up and running with Radix Primitives.
               </ListItem>
-              <ListItem title="Task" href="/task">
+              <ListItem >
+              <Link className="NavigationMenuLink" to='/task'  >Task</Link>
                 Unstyled and compatible with any styling solution.
               </ListItem>
               <ListItem title="Task1" href="/task1">
@@ -64,7 +66,7 @@ const NavigationMenuDemo = () => {
               </ListItem>
               <ListItem title="Releases" href="/primitives/docs/overview/releases">
           <NavigationMenu.Link className="NavigationMenuLink" href="/pinningsection">
-            Sectionpin
+            Sectionpin 
           </NavigationMenu.Link>
                 Radix Primitives releases and their changelogs.
               </ListItem>
@@ -73,9 +75,9 @@ const NavigationMenuDemo = () => {
         </NavigationMenu.Item>
 
         <NavigationMenu.Item>
-          <NavigationMenu.Link className="NavigationMenuLink" href="/horizontal">
-            HORIZONTAL
-          </NavigationMenu.Link>
+          {/* <NavigationMenu.Link className="NavigationMenuLink" href="/horizontal"> */}
+            <Link className="NavigationMenuLink" to='/horizontal'  >HORIZONTAL</Link>
+          {/* </NavigationMenu.Link> */}
         </NavigationMenu.Item>
 
         <NavigationMenu.Indicator className="NavigationMenuIndicator">
