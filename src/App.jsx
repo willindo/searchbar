@@ -54,7 +54,7 @@ export default function App() {
           <Route path="about" element={<About />}/>
           <Route path="connected" element={<Connected />}/>
           <Route path="pinningsection" element={<PinningSection />}/>
-          <Route path="horizontal" element={<Horiz />}/>
+          <Route path="horizontal" element={<Pinned />}/>
           <Route path="Task" element={<Task/> }/>
           <Route path="Task1" element={<Task1/> }/>
           <Route path="Task2" element={ <Task2/>}/>
@@ -130,7 +130,8 @@ function Layout() {
 export  function Home() {
   return (
     <>
-    <Pinned/>
+<Horiz/>
+    {/* <Pinned/> */}
     </>
   )
 }
