@@ -1,0 +1,19 @@
+.circle-container {
+    background-color: #10a810;
+    height: 100vh;
+    position: relative;
+    /* margin-top: 2ovh; */
+
+}
+
+.imagelike {
+    overflow: visible;
+    /* border: 2px solid violet; */
+    width: 50px;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    position: absolute;
+    /* margin-top: 33vh; */
+    border-radius: 50%;
+}

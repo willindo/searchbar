@@ -5,7 +5,7 @@ import classNames from "classnames";
 import { CaretDownIcon } from "@radix-ui/react-icons";
 import "./NavigationMenu.css";
 
-const NavigationMenu2 = () => {
+const NavigationMenu1 = () => {
   return (
     <NavigationMenu.Root className="NavigationMenuRoot">
       <NavigationMenu.List className="NavigationMenuList">
@@ -57,14 +57,14 @@ const NavigationMenu2 = () => {
           <NavigationMenu.Content className="NavigationMenuContent">
             <ul className="List two">
               <ListItem>
-                <Link className="NavigationMenuLink" to="/task">
-                  Task
+                <Link className="NavigationMenuLink" to="/flipclass">
+                  Flipclass
                 </Link>
                 Build high-quality, accessible design systems and web apps.
               </ListItem>
               <ListItem>
-                <Link className="NavigationMenuLink" to="/task1">
-                  Task1
+                <Link className="NavigationMenuLink" to="/circle">
+                  Circle
                 </Link>
                 A quick tutorial to get you up and running with Radix
                 Primitives.
@@ -132,4 +132,4 @@ const ListItem = React.forwardRef(
   )
 );
 
-export default NavigationMenu2;
+export default NavigationMenu1;

@@ -1,0 +1,17 @@
+label {
+    display: inline-block;
+}
+
+label>span {
+    display: block;
+    padding-bottom: 10px;
+}
+
+[role="option"]:focus {
+    outline: 0;
+}
+
+[role="combobox"] {
+    background: #c0bb14;
+    user-select: none;
+}

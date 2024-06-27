@@ -1,0 +1,87 @@
+body {
+    scroll-behavior: smooth;
+}
+
+.targetflp {
+    background-color: burlywood;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    line-height: 120px;
+    color: peru;
+    background-color: rgb(169, 24, 145);
+    margin-left: 30px;
+}
+
+.target1flp {
+    background-color: red;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    /* line-height: 120px; */
+    color: peru;
+    margin: 200px;
+}
+
+.containerflipflp {
+    display: flex;
+    position: absolute;
+    height: 200px;
+    top: 20%;
+    right: 30%;
+    width: 20%;
+    /* border: 2px solid whitesmoke; */
+    text-align: center;
+    padding: 15px;
+    pointer-events: none;
+    background-color: #21b1b1;
+    flex-direction: column;
+    /* z-index: -1; */
+}
+
+.containerflip1flp {
+    display: flex;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    color: blue;
+    background-color: #a0b121;
+    width: 30%;
+    border: 2px solid red;
+    text-align: center;
+    padding: 15px;
+    pointer-events: none;
+    flex-direction: column;
+    height: 150px;
+    /* z-index: -1; */
+}
+
+.inbox1,
+.inbox2,
+.inbox3,
+.inbox4 {
+    background-color: teal;
+    padding-top: 2cqh;
+    padding-bottom: 6%;
+    text-align: center;
+    margin: 15px 0;
+    line-height: 100%;
+    border: 2px dotted gold;
+    height: 20%;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+.button {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    position: absolute;
+    width: 60px;
+    bottom: 20px;
+    right: 30px;
+}
